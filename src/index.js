@@ -3,6 +3,9 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
+// setup for React Router
+import { BrowserRouter as Router } from "react-router-dom";
+
 // setup for Redux
 import { createStore } from "redux";
 import { Provider } from "react-redux";
