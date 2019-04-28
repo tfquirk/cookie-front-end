@@ -1,4 +1,4 @@
-import React, { useEffect, Fragment } from "react";
+import React, { useEffect } from "react";
 
 // connect to Redux state
 import { connect } from "react-redux";
@@ -11,6 +11,7 @@ import { fetchRecipes } from "./Apis/FetchRecipes";
 
 //pages
 import Homepage from "./Pages/Homepage";
+import FourZeroFour from "./Pages/FourZeroFour";
 
 const App = props => {
   useEffect(() => {
@@ -19,9 +20,10 @@ const App = props => {
   });
 
   return (
-    <Fragment>
+    <Switch>
       <Route exact path="/" component={Homepage} />
-    </Fragment>
+      <Route component={FourZeroFour} />
+    </Switch>
   );
 };
 
